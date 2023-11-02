@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Words In String</title>
+</head>
+<body>
+    
+<script>
+
+function reverseWordsInSentence(sentence) {
+    let words = sentence.split(' '); 
+    let reversedSentence = '';
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let reversedWord = '';
+
+        for (let j = word.length - 1; j >= 0; j--) {
+            reversedWord += word[j]; 
+        }
+
+        reversedSentence += reversedWord;
+
+        if (i < words.length - 1) {
+            reversedSentence += ' '; 
+        }
+    }
+
+    return reversedSentence;
+}
+
+const inputSentence = prompt("Enter a sentence:"); 
+const reversedResult = reverseWordsInSentence(inputSentence);
+alert("Reversed sentence: " + reversedResult); 
+
+
+
+</script>
+
+
+
+</body>
+</html>
+
+

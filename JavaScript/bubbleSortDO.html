@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort DO</title>
+</head>
+<body>
+    
+<script>
+<!-- To see the output, after running the program on the live server and giving the input, open the inspect window on the broser! -->
+
+function bubbleSortDescending(arr) {
+    const n = arr.length;
+
+    for (let i = 0; i < n - 1; i++) {
+        for (let j = 0; j < n - 1 - i; j++) {
+            if (arr[j] < arr[j + 1]) {
+                const temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+const userInput = prompt("Enter numbers separated by spaces: ");
+const inputArray = userInput.split(' ').map(Number); 
+
+bubbleSortDescending(inputArray);
+console.log("Sorted array in descending order: " + inputArray);
+
+
+</script>
+
+
+</body>
+</html>
